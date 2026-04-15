@@ -1,0 +1,23 @@
+{
+  "name": "wdsuite_qa",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript test suite for WD Suite - Walker & Dunlop commercial real estate platform",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:pre-login": "npx playwright test --project=pre-login",
+    "test:logged-in": "npx playwright test --project=logged-in",
+    "test:api": "npx playwright test --project=api",
+    "test:headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
+  },
+  "author": "Karine Ramos",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
