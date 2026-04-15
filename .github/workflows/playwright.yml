@@ -25,11 +25,12 @@ jobs:
       run: npx playwright test
       env:
           CI: true
-          BASE_URL: ${{ secrets.BASE_URL }}
+          BASE_URL: ${{ vars.BASE_URL }}
+          AVM_API_URL: ${{ vars.AVM_API_URL }}
+          EVRA_API_URL: ${{ vars.EVRA_API_URL }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-          AVM_API_URL: ${{ secrets.AVM_API_URL }}
-          EVRA_API_URL: ${{ secrets.EVRA_API_URL }}
+
       
     - name: Upload Playwright Report
       uses: actions/upload-artifact@v4
