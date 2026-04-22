@@ -13,7 +13,7 @@ test.describe('Property Detail - Logged In', () => {
         await homePage.searchAndSelectProperty(PROPERTIES.OCEANVIEW_TOWERS);
 
         await expect(page).toHaveURL(/\/property\/lat\/.+\/lng\/.+/);
-        await expect(propertyPage.propertyName).toContainText('Ocean View Towers');
+        await expect(propertyPage.propertyName).toContainText(PROPERTIES.OCEANVIEW_TOWERS);
     });
 
     test('tenant credit score is visible for authenticated user', async ({ page }) => {
@@ -24,7 +24,7 @@ test.describe('Property Detail - Logged In', () => {
         await homePage.searchAndSelectProperty(PROPERTIES.OCEANVIEW_TOWERS);
 
         await expect(propertyPage.tenantCreditCards).toBeVisible();
-        await expect(propertyPage.tenantCardTitle).toContainText('Ocean View Towers');
+        await expect(propertyPage.tenantCardTitle).toContainText(PROPERTIES.OCEANVIEW_TOWERS);
         await expect(propertyPage.qualityScore).toBeVisible();
         await expect(propertyPage.creditValue).toBeVisible();
         await expect(propertyPage.progressBar).toBeVisible();
