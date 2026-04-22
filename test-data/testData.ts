@@ -11,6 +11,6 @@ export interface SearchTestCase {
 
 export const SEARCH_TEST_CASES: SearchTestCase[] = [
   { query: PROPERTIES.BEACHWALK_APARTMENTS, expectedName: 'Beachwalk' },
-  { query: PROPERTIES.OCEANVIEW_TOWERS, expectedName: 'Ocean View' },
+  { query: PROPERTIES.OCEANVIEW_TOWERS, expectedName: 'Oceanview' },
   { query: PROPERTIES.IRVINE_SPECTRUM, expectedName: 'Irvine Spectrum' },
 ];
